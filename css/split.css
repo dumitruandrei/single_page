@@ -56,6 +56,7 @@ img {
   -webkit-flex-flow: row wrap;
   flex-flow: row;
   justify-content: space-around;
+  outline: 3px dashed blue;
 }
 
 .card {
@@ -63,6 +64,7 @@ img {
   height: 100%;
   text-align: center;
   color: #00FF00;
+  outline: 1px dashed red;
 }
 
 /* Responsive flexbox */
