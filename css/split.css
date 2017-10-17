@@ -40,3 +40,35 @@ h1 {
   line-height: 1.032em; /* 44 / 42.635 = 1.032 */
   padding-bottom: 0.516em;*/ /* 22 / 42.635 = 0.516 */
 }
+
+/* Responsive images */
+img {
+  display: block;
+  max-width: 100%;
+  image-orientation: from-image;
+}
+
+.content {
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 40%;
+  height: 40%;
+  text-align: center;
+}
+
+#picture-side {
+  width: 40%;
+  height: 100%;
+}
+
+#text-side {
+  width: 40%;
+  height: 100%;
+}
