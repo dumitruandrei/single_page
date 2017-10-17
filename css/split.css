@@ -25,9 +25,10 @@ html {
 }
 
 body {
-  padding-top: 2.444em; /* 44 / 18 = 2.444 */
+  padding-top: 1.222em; /* 22 / 18 = 1.222 */
   padding-right: 1.222em; /* 22 / 18 = 1.222 */
   padding-left: 1.222em; /* 22 / 18 = 1.222 */
+  /*background-color: #000000;*/
 }
 
 p {
@@ -35,7 +36,7 @@ p {
 }
 
 h1 {
-  color: #666;
+  color: #FF0000;
   font-size: 2.369em; /* 42.635 / 18 = 2.369 */
   line-height: 1.032em; /* 44 / 42.635 = 1.032 */
   padding-bottom: 0.516em;*/ /* 22 / 42.635 = 0.516 */
@@ -53,22 +54,38 @@ img {
   display:-ms-flexbox;
   display:flex;
   -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
+  flex-flow: row;
   justify-content: space-around;
 }
 
 .card {
   width: 40%;
-  height: 40%;
+  height: 100%;
   text-align: center;
+  color: #00FF00;
 }
 
-#picture-side {
-  width: 40%;
-  height: 100%;
+/* Responsive flexbox */
+@media screen and (min-width: 280px) {
+  .content {
+    flex-flow: column;
+  }
+  .card {
+    width: 100%;
+  }
 }
 
-#text-side {
-  width: 40%;
-  height: 100%;
+@media screen and (min-width: 625px) {
+  .content {
+    flex-flow: row;
+  }
+  .card {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .card {
+    width: 40%;
+  }
 }
