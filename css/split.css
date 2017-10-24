@@ -62,7 +62,6 @@ img {
 .card {
   width: 40%;
   height: 100%;
-  text-align: center;
   color: #00FF00;
   outline: 1px dashed red;
 }
