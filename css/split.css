@@ -69,7 +69,7 @@ img {
 /* Responsive flexbox */
 @media screen and (min-width: 280px) {
   .content {
-    flex-flow: column;
+    flex-flow: column-reverse;
   }
   .card {
     width: 100%;
@@ -78,7 +78,7 @@ img {
 
 @media screen and (min-width: 625px) {
   .content {
-    flex-flow: row;
+    flex-flow: row wrap-reverse;
   }
   .card {
     width: 100%;
@@ -86,7 +86,19 @@ img {
 }
 
 @media screen and (min-width: 720px) {
+  .content {
+    flex-flow: column-reverse;
+  }
   .card {
-    width: 40%;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .content {
+    flex-flow: row;
+  }
+  .card {
+    width: 100%;
   }
 }
