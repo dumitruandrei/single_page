@@ -42,6 +42,11 @@ h1 {
   padding-bottom: 0.516em;*/ /* 22 / 42.635 = 0.516 */
 }
 
+footer {
+  color: #00FF00;
+  text-align: center;
+}
+
 /* Responsive images */
 img {
   display: block;
@@ -56,14 +61,14 @@ img {
   -webkit-flex-flow: row wrap;
   flex-flow: row;
   justify-content: space-around;
-  outline: 3px dashed blue;
+  /*outline: 3px dashed blue;*/
 }
 
 .card {
-  width: 40%;
+  width: 100%;
   height: 100%;
   color: #00FF00;
-  outline: 1px dashed red;
+  /*outline: 1px dashed red;*/
 }
 
 /* Responsive flexbox */
@@ -71,26 +76,17 @@ img {
   .content {
     flex-flow: column-reverse;
   }
-  .card {
-    width: 100%;
-  }
 }
 
 @media screen and (min-width: 625px) {
   .content {
     flex-flow: row wrap-reverse;
   }
-  .card {
-    width: 100%;
-  }
 }
 
 @media screen and (min-width: 720px) {
   .content {
     flex-flow: column-reverse;
-  }
-  .card {
-    width: 100%;
   }
 }
 
@@ -99,6 +95,6 @@ img {
     flex-flow: row;
   }
   .card {
-    width: 100%;
+    padding: 1.2222em;
   }
 }
