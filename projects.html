@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Projects</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/split.css" />
+    <script src="js/modernizr.js"></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src="js/site.js"></script>
+  </head>
+  <body>
+    <header id="header">
+      <nav id="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </nav>
+      <article id="text" class="card">
+        <h1>Software Engineering Projects</h1>
+        <p>
+          Projects I have worked on during internships.
+        </p>
+      </article>
+    </header>
+    <main id="projects" class="content">
+     <figure id="first-card" class="flipping-card" onclick="flip('#first-card')">
+        <img class="card-front" src="img/google.png" alt="Google logo.">
+        <ul class="card-back" style="list-style-type:disc">
+          <li>
+            Worked on the team that provides advanced email filtering for
+            data loss prevention.
+          </li>
+          <li>
+            Redesigned, implemented, and tested parts of the core engine that
+            processes billions of emails every day.
+          </li>
+        </ul>
+      </figure>
+      <figure id="second-card" class="flipping-card" onclick="flip('#second-card')">
+        <img class="card-front" src="img/google.png" alt="Google logo.">
+        <ul class="card-back" style="list-style-type:disc">
+          <li>
+            Implemented and tested a feature that provides users detailed information
+            on why emails get bounced.
+          </li>
+          <li>
+            Adapted the Gmail delivery pipeline to extract and pass the information
+            to the user logs.
+          </li>
+        </ul>
+      </figure>
+      <figure id="third-card" class="flipping-card" onclick="flip('#third-card')">
+        <img class="card-front" src="img/here.png" alt="HERE Maps logo.">
+        <ul class="card-back" style="list-style-type:disc">
+          <li>
+            Developed real-time event processing and Big Data systems in the cloud
+            for Highly Automated Driving.
+          </li>
+          <li>
+            Designed, implemented, and tested software in the Agile environment
+            in a team of 7 people.
+          </li>
+        </ul>
+      </figure>
+      <figure id="fourth-card" class="flipping-card" onclick="flip('#fourth-card')">
+        <img class="card-front" src="img/bitdefender.png" alt="Google logo.">
+        <ul class="card-back" style="list-style-type:disc">
+          <li>
+            Developed software able to analyze and extract relevant information
+            from huge datasets in a short time (used Machine Learning, Natural
+            Language Processing, and Data Mining).
+          </li>
+          <li>
+            Aced Stanford's online Machine Learning course on Coursera.org.
+          </li>
+        </ul>
+      </figure>
+   </main>
+    <footer id="footer">
+      <small>Copyright Andrei Georgian Dumitru.</small>
+    </footer>
+ </body>
+</html>

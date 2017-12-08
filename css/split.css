@@ -41,6 +41,7 @@ h1 {
   line-height: 1.032em; /* 44 / 42.635 = 1.032 */
   padding-top: 0.516em; /* 22 / 42.635 = 0.516 */
   padding-bottom: 0.516em; /* 22 / 42.635 = 0.516 */
+  text-align: left;
 }
 
 #navigation {
@@ -50,7 +51,7 @@ h1 {
   width: 100%;
 }
 #navigation li {
-  width: 33.333333%;
+  width: 50%;
   float: left;
 }
 
@@ -85,6 +86,12 @@ img {
   image-orientation: from-image;
 }
 
+li ul {
+  padding-top: 0.611em; /* 11 / 18 = 0.611 */
+  padding-left: 1.222em; /* 22 / 18 = 1.222 */
+  padding-bottom: 0;
+}
+
 .content {
   display: -webkit-box;
   display: -moz-box;
@@ -94,12 +101,64 @@ img {
 
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
+  position:relative;
 }
 
 .card {
   width: 100%;
   height: 100%;
   color: #00FF00;
+  position: relative;
+}
+
+.flipping-card, .flipping-card img, .flipping-card ul {
+  width: 100%;
+  height: 100%;
+  color: #00FF00;
+  position: relative;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: 50% 50%;
+}
+
+.flipping-card ul {
+  position: absolute;
+}
+
+.flipping-card img {
+  width: 100%;
+}
+
+.card-front,
+.card-back {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px;
+	margin: 0;
+	justify-content: flex-end;
+}
+
+.card-back {
+  position: absolute;
+     -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg ); 
+}
+
+.flipping-card.flipped {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
 }
 
 /* Responsive flexbox */
@@ -119,13 +178,22 @@ img {
   .content {
     flex-flow: column-reverse;
   }
+  .flipping-card {
+    width: 80%;
+  }
 }
 
 @media screen and (min-width: 1000px) {
   .content {
     flex-flow: row;
+    flex-wrap: wrap;
   }
   .card {
+    flex: 0 45%;
+    padding: 1.2222em;
+  }
+  .flipping-card {
+    width: 25%;
     padding: 1.2222em;
   }
 }
