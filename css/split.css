@@ -92,6 +92,7 @@ img {
 
 /* Cards and flipping cards */
 .card-back li {
+  list-style-type: disc;
   padding-top: 0.611em; /* 11 / 18 = 0.611 */
   padding-left: 1.222em; /* 22 / 18 = 1.222 */
   padding-bottom: 1.222em;
