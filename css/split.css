@@ -86,10 +86,10 @@ img {
   image-orientation: from-image;
 }
 
-li ul {
+.card-back li {
   padding-top: 0.611em; /* 11 / 18 = 0.611 */
   padding-left: 1.222em; /* 22 / 18 = 1.222 */
-  padding-bottom: 0;
+  padding-bottom: 1.222em;
 }
 
 .content {
@@ -116,15 +116,16 @@ li ul {
   height: 100%;
   color: #00FF00;
   position: relative;
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-o-backface-visibility: hidden;
-	backface-visibility: hidden;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	-o-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	-webkit-transform-origin: 50% 50%;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  transition: transform 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50%;
 }
 
 .flipping-card ul {
@@ -137,28 +138,26 @@ li ul {
 
 .card-front,
 .card-back {
-	position: relative;
-	top: 0;
-	left: 0;
-	width: 100%;
-	padding: 20px;
-	margin: 0;
-	justify-content: flex-end;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.222em;
+  margin: 0;
+  justify-content: flex-end;
 }
 
 .card-back {
   position: absolute;
-     -webkit-transform: rotateY( 180deg );
-    -moz-transform: rotateY( 180deg );
-    -o-transform: rotateY( 180deg );
-    transform: rotateY( 180deg ); 
+   -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .flipping-card.flipped {
-    -webkit-transform: rotateY( 180deg );
-    -moz-transform: rotateY( 180deg );
-    -o-transform: rotateY( 180deg );
-    transform: rotateY( 180deg );
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 /* Responsive flexbox */
@@ -166,11 +165,18 @@ li ul {
   .content {
     flex-flow: column-reverse;
   }
+  .flipping-card {
+    padding-top: 1.2222em;
+    padding-bottom: 1.2222em;
+  }
 }
 
 @media screen and (min-width: 625px) {
   .content {
     flex-flow: row wrap-reverse;
+  }
+  .flipping-card {
+    padding: 0;
   }
 }
 
@@ -179,7 +185,7 @@ li ul {
     flex-flow: column-reverse;
   }
   .flipping-card {
-    width: 80%;
+    width: 60%;
   }
 }
 
